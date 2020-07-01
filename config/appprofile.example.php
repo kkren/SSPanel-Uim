@@ -269,8 +269,8 @@ $_ENV['Clash_Profiles'] = [
             [
                 'name' => '自动优选',
                 'type' => 'url-test',
-                'url': 'http://www.gstatic.com/generate_204',
-                'interval': 300,
+                'url' => 'http://www.gstatic.com/generate_204',
+                'interval' => 300,
                 'content' => [
                     'regex' => '(.*)'
                 ]
