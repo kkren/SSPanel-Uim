@@ -254,92 +254,25 @@ $_ENV['Clash_Profiles'] = [
         'proxies' => [],
         'proxy-groups' => [
             [
-                'name' => '🔰国外流量',
+                'name' => '国外流量',
                 'type' => 'select',
-                'content' => [
+                'content' => [,
+                    'left-proxies' => [
+                        '自动优选'
+                    ],
                     'regex' => '(.*)',
                     'right-proxies' => [
-                        '🚀直接连接'
-                    ],
-                ]
-            ],
-            [
-                'name' => '⚓️其他流量',
-                'type' => 'select',
-                'content' => [
-                    'left-proxies' => [
-                        '🔰国外流量',
-                        '🚀直接连接'
-                    ]
-                ]
-            ],
-            [
-                'name' => '✈️Telegram',
-                'type' => 'select',
-                'content' => [
-                    'left-proxies' => [
-                        '🔰国外流量'
-                    ],
-                    'regex' => '(.*)',
-                ]
-            ],
-            [
-                'name' => '🎬Youtube',
-                'type' => 'select',
-                'content' => [
-                    'left-proxies' => [
-                        '🔰国外流量'
-                    ],
-                    'regex' => '(.*)',
-                ]
-            ],
-            [
-                'name' => '🎬Netflix',
-                'type' => 'select',
-                'content' => [
-                    'left-proxies' => [
-                        '🔰国外流量'
-                    ],
-                    'regex' => '(.*)',
-                ]
-            ],
-            [
-                'name' => '🎬哔哩哔哩',
-                'type' => 'select',
-                'content' => [
-                    'left-proxies' => [
-                        '🚀直接连接'
-                    ],
-                    'regex' => '(.*)',
-                ]
-            ],
-            [
-                'name' => '🎬国外媒体',
-                'type' => 'select',
-                'content' => [
-                    'left-proxies' => [
-                        '🔰国外流量'
-                    ],
-                    'regex' => '(.*)',
-                ]
-            ],
-            [
-                'name' => '🍎苹果服务',
-                'type' => 'select',
-                'content' => [
-                    'left-proxies' => [
-                        '🚀直接连接',
-                        '🔰国外流量'
-                    ]
-                ]
-            ],
-            [
-                'name' => '🚀直接连接',
-                'type' => 'select',
-                'content' => [
-                    'left-proxies' => [
                         'DIRECT'
                     ]
+                ]
+            ],
+            [
+                'name' => '自动优选',
+                'type' => 'url-test',
+                'url': 'http://www.gstatic.com/generate_204',
+                'interval': 300,
+                'content' => [
+                    'regex' => '(.*)'
                 ]
             ]
         ],
