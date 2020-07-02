@@ -251,8 +251,8 @@ $_ENV['Clash_Profiles'] = [
             'external-controller' => '0.0.0.0:9090',
             'secret'              => ''
         ],
-        'Proxy' => [],
-        'ProxyGroup' => [
+        'proxies' => [],
+        'proxy-groups' => [
             [
                 'name' => '🔰国外流量',
                 'type' => 'select',
@@ -343,7 +343,7 @@ $_ENV['Clash_Profiles'] = [
                 ]
             ]
         ],
-        'Rule' => [
+        'rules' => [
             'source' => 'clash/default.tpl'
         ]
     ]

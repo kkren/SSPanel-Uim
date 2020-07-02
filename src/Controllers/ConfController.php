@@ -315,8 +315,8 @@ class ConfController extends BaseController
      */
     public static function getClashConfs($User, $AllProxys, $Configs)
     {
-        if (isset($Configs['Proxy']) && count($Configs['Proxy']) != 0) {
-            $tmpProxys = array_merge($AllProxys, $Configs['Proxy']);
+        if (isset($Configs['proxies']) && count($Configs['proxies']) != 0) {
+            $tmpProxys = array_merge($AllProxys, $Configs['proxies']);
         } else {
             $tmpProxys = $AllProxys;
         }
@@ -329,11 +329,11 @@ class ConfController extends BaseController
         $tmp = $Configs['General'];
         $tmp['proxies'] = $Proxys;
         if (isset($Configs['Proxy Group'])) {
-            $Configs['ProxyGroup'] = $Configs['Proxy Group'];
+            $Configs['proxy-groups'] = $Configs['Proxy Group'];
         }
         $tmp['proxy-groups'] = self::getClashConfProxyGroup(
             $AllProxys,
-            $Configs['ProxyGroup']
+            $Configs['proxy-groups']
         );
 
         $Conf = [
