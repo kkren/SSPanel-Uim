@@ -256,7 +256,7 @@ $_ENV['Clash_Profiles'] = [
             [
                 'name' => '国外流量',
                 'type' => 'select',
-                'content' => [,
+                'content' => [
                     'left-proxies' => [
                         '自动优选'
                     ],
